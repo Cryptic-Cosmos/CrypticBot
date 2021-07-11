@@ -8,8 +8,8 @@ mainClassName = 'org.crypticcosmos.crypticbot.CrypticBot'
 version '1.0'
 def jdaVersion = '4.3.0_295'
 
-setSourceCompatibility(JavaVersion.VERSION_16)
-setTargetCompatibility(JavaVersion.VERSION_16)
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 repositories {
     jcenter()
