@@ -1,6 +1,5 @@
 package org.crypticcosmos.crypticbot;
 
-import me.duncte123.botcommons.BotCommons;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.ReadyEvent;
@@ -31,15 +30,6 @@ public class Listener extends ListenerAdapter {
         final long guildId = event.getGuild().getIdLong();
         String prefix = Config.PREFIX;
         String raw = event.getMessage().getContentRaw();
-
-        if (raw.equalsIgnoreCase(prefix + "shutdown")
-                && user.getId().equals(Config.REALZ_ID)) {
-            event.getChannel().sendMessage("I am now shutting down.").queue();
-            LOGGER.info("Shutting down");
-            event.getJDA().shutdown();
-            BotCommons.shutdown(event.getJDA());
-            return;
-        }
 
         String msg = event.getMessage().getContentRaw().toLowerCase();
 
