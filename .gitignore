@@ -1,0 +1,4 @@
+/src/main/java/org/crypticcosmos/crypticbot/Config.java
+build/
+.gradle/
+.idea/
